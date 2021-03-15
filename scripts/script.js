@@ -45,18 +45,16 @@ function game() {
     
     
 
-    const playerSelection = prompt("Rock, paper, or scissors?");
-    const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playerScore, computerScore);
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playerScore, computerScore);
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playerScore, computerScore);
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playerScore, computerScore);
-    console.log(playRound(playerSelection, computerSelection));
-    console.log(playerScore, computerScore);
+    while (playerScore < 5 && computerScore < 5){
+        const playerSelection = prompt("Rock, paper, or scissors?");
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(playerScore, computerScore);
+    };
+
+    return (playerScore > computerScore) ? "You Win!"
+    : "You Lose!";
+
 
 };
 
