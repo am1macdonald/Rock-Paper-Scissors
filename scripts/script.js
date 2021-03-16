@@ -10,6 +10,7 @@ function game() {
 
     let playerScore = 0;
     let computerScore = 0;
+    let exitStrategy = false;
 
     function changeScore(winOrLose){
         if (winOrLose == 'w') {
@@ -22,7 +23,6 @@ function game() {
     }
 
     function playRound(playerSelection, computerSelection) {
-
         if (/rock|^r/gi.test(playerSelection)) {
 
             return (computerSelection == 'rock') ? "Tie" 
@@ -38,6 +38,8 @@ function game() {
             return (computerSelection == 'scissors') ? "We chose ALIKE!" 
             :   (computerSelection == 'rock') ? changeScore('l')
             :   changeScore('w');
+        } else if (/exit|^e/gi.test(playerSelection)){
+            exitStrategy = true;
         }
         else return "Please enter a valid option";
 
@@ -45,8 +47,8 @@ function game() {
     
     
 
-    while (playerScore < 5 && computerScore < 5){
-        const playerSelection = prompt("Rock, paper, or scissors? (R, P, S)");
+    while (playerScore < 5 && computerScore < 5 && exitStrategy == false){
+        const playerSelection = prompt("Rock, paper, or scissors? (R, P, S)\n\nType Exit to quit.");
         const computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection), computerSelection);
         console.log(playerScore, computerScore);
