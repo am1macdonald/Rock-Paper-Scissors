@@ -23,18 +23,18 @@ function game() {
 
     function playRound(playerSelection, computerSelection) {
 
-        if (/(r|rock)/gi.test(playerSelection)) {
+        if (/rock|^r/gi.test(playerSelection)) {
 
             return (computerSelection == 'rock') ? "Tie" 
             :   (computerSelection == 'paper') ? changeScore('l')
             :   changeScore('w');
         }
-        else if (/(p|paper)/gi.test(playerSelection)){
+        else if (/paper|^p/gi.test(playerSelection)){
             return (computerSelection == 'paper') ? "Tie! Great minds think alike!" 
             :   (computerSelection == 'scissors') ? changeScore('l')
             :   changeScore('w');
         }
-        else if (/(s|scissors)/gi.test(playerSelection)){
+        else if (/scissors|^s/gi.test(playerSelection)){
             return (computerSelection == 'scissors') ? "We chose ALIKE!" 
             :   (computerSelection == 'rock') ? changeScore('l')
             :   changeScore('w');
