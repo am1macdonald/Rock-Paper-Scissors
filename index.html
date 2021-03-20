@@ -6,21 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+
 
     <script src="scripts/script.js"></script>
 
 
     <title>Rock, paper, scissors game</title>
   </head>
-  <body>
+  <main>
+    <header>
+          <h1 id="game-title">MADD JOHN'S RPS 2021</h1>
+    </header>
     <body>
-
-        <header>
-          <h1 class="text-center">MADD JOHN'S RPS 2021</h1>
-        </header>
-        <Body>
-          <div class="game-panel">
+      <div id="background-container">
+          <img src="assets/bence-balla-schottner-deGn9vSwXIM-unsplash.jpg" alt="foosball field" id="background-image" />
+      </div>
+      <div id="game-panel">
             <h2 class="round-number">ROUND: ${round_number}</h2>
             <div class="score-keeper">
               <div class="player-score-card">
@@ -37,21 +42,28 @@
                   <div class="score-breakdown"></div>
                 </div>
               </div>
-
-
+            </div>
+            <div class="selection_buttons">
+              <button id="rock" name="rock" type="button"></button>
+              <button id="paper" name="paper" type="button"></button>
+              <button id="scissors" name="scissors" type="button"></button>
             </div>
 
     
-          </div>
-        </Body>
-        
-        
+      </div>
     </body>
+    <footer>
+      <h5>Credits</h5>
+      <p>Photo by <a
+        href="https://unsplash.com/@ballaschottner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Bence
+        Balla-Schottner</a> on <a
+        href="/s/photos/football-field?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+    </footer>
+  </main>
 
 
 
 
-    </body>
 </html>
 
 
