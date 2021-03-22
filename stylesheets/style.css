@@ -25,9 +25,11 @@ h1 {
 }
 
 #game-panel {
+    
     background-color: #e8e4e6;
     opacity: 0.85;
-    color: #001e1d;
+    color: #f9bc60;
+    text-shadow: 1px 1px 3px gray;
 
     margin: 0;
     position: absolute;
@@ -46,8 +48,23 @@ h1 {
     z-index: auto;
 }
 
+.panel-text-outline{
+    -webkit-text-stroke: 0.5px black;
+}
+
 #score-keeper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     background-color: violet;
+}
+
+#round-number{
+    font-size: 3vw;
+}
+
+button {
+    
 }
 
 #credits {
@@ -61,5 +78,7 @@ h1 {
 }
 
 .credit {
+    font-size: 1.5vw;
     text-decoration: none;
+    color: #f9bc60;
 }
