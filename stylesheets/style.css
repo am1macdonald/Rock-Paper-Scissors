@@ -79,14 +79,18 @@ h1 {
     width: 35%;
 }
 
-h6 {
+h5 {
 
     font-size: 2.5vw;
 
 }
 
+h6 {
+    font-size: 2.0vw;
+}
+
 #tie-counter {
-    
+
 }
 
 .score {
