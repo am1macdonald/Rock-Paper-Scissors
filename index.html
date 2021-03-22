@@ -22,18 +22,22 @@
       <h1 id="game-title">MADD JOHN'S RPS 2021</h1> 
       <div id="game-panel">
             <h4 class="panel-text-outline" id="round-number">ROUND: ${round_number}</h2>
-            <div class="panel-text-outline" id="score-keeper">
+            <div id="score-keeper">
               <div  class="score-card" id="player-score-card">
                 <div id="player-score">
-                  <h6>Home</h6>
-                  <div id="score"></div>
+                  <h6 class="panel-text-outline">Home</h6>
+                  <div class="score"></div>
                   <div class="score-breakdown" id="player-score-breakdown"></div>
                 </div>
               </div>
+              <div id="tie-counter">
+                <h6>Ties</h6>
+                <div class="score"></div>
+              </div>
               <div class="score-card" id="computer-score-card">
                 <div class="computer-score">
-                  <h6>Away</h6>
-                  <div id="score"></div>
+                  <h6 class="panel-text-outline">Away</h6>
+                  <div class="score"></div>
                   <div class="score-breakdown" id="computer-score-breakdown"></div>
                 </div>
               </div>
