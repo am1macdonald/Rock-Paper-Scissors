@@ -7,8 +7,8 @@ Updating the readMe in 2021. Trying to get my stride with git again.
 # The Odin Project 
 ## Rock, Paper, Scissors Project
 
->"a simple implementation of grade-school classic 
-`rock paper scissors`" from the [Foundations curriculum ](https://www.theodinproject.com/courses/foundations/lessons/rock-paper-scissors).
+>"a simple implementation of grade-school classic `rock paper scissors`" 
+- from the [Foundations curriculum ](https://www.theodinproject.com/courses/foundations/lessons/rock-paper-scissors).
 
 ## What I Learned
 
