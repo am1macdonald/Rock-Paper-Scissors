@@ -1,5 +1,4 @@
 const buttons = document.querySelectorAll('button');
-
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playRound(button.id);
@@ -9,16 +8,19 @@ buttons.forEach((button) => {
 
 let playerScore = 0;
 
-const playerScoreDisplay = document.getElementById("#player-score-display");
-console.log(playerScoreDisplay.nodeType);
-//playerScoreDisplay.replaceChild(document.createTextNode(playerScore.toString()), playerScoreDisplay.childNodes[0]);
+function updateScores(){
 
-    
+    document.getElementById("player-score-display").innerText = playerScore.toString();
+
+}
+
 
 
 
 let computerScore = 0;
+
 let exitStrategy = false;
+
 function changeScore(winOrLose){
         if (winOrLose == 'w') {
             playerScore++
@@ -33,11 +35,12 @@ function computerPlay() {
     return choices[Math.floor(Math.random() * choices.length)];
 };
 function playRound(playerSelection) {
+    updateScores();
 
     const computerSelection = computerPlay();
     
 
-    console.log('Player Score: ', playerScore);
+    console.log('Player Score: ', playerScore.toString());
     console.log('Computer Score: ', computerScore);
     console.log('comp: ' + computerSelection, 'player: ' + playerSelection);
     
@@ -57,6 +60,8 @@ function playRound(playerSelection) {
     } else if (playerSelection){
             exitStrategy = true;
     } else return "Please enter a valid option";
+
+    
 };
     /*
     while (playerScore < 5 && computerScore < 5 && exitStrategy == false){
