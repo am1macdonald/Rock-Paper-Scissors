@@ -6,8 +6,16 @@ buttons.forEach((button) => {
     });
 });
 
-    
+
 let playerScore = 0;
+
+const playerScoreDisplay = document.getElementById("#player-score-display");
+console.log(playerScoreDisplay.nodeType);
+//playerScoreDisplay.replaceChild(document.createTextNode(playerScore.toString()), playerScoreDisplay.childNodes[0]);
+
+    
+
+
 
 let computerScore = 0;
 let exitStrategy = false;
