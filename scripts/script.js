@@ -7,17 +7,27 @@ buttons.forEach((button) => {
 
 
 let playerScore = 0;
+let computerScore = 0;
+let tieCount = 0;
 
 function updateScores(){
-
     document.getElementById("player-score-display").innerText = playerScore.toString();
+    document.getElementById("computer-score-display").innerText = computerScore.toString();
+    document.getElementById("ties-display").innerText = tieCount.toString();
 
-}
+};
+function incrementScore(player) {
+    if (player === 'comp') {
+        computerScore++;
+    } else if (player === 'person'){
+        playerScore++;
+    } else tieCount++;
+    updateScores();
+};
 
 
 
 
-let computerScore = 0;
 
 let exitStrategy = false;
 
@@ -29,7 +39,7 @@ function changeScore(winOrLose){
             computerScore++
             return "Lose..."
         }
-}
+};
 function computerPlay() {
     const choices = ['rock', 'paper', 'scissors'];
     return choices[Math.floor(Math.random() * choices.length)];
@@ -46,17 +56,17 @@ function playRound(playerSelection) {
     
 
     if (playerSelection === 'rock') {
-            return (computerSelection === 'rock') ? "Tie" 
-            :   (computerSelection === 'paper') ? changeScore('l')
-            :   changeScore('w');
+        return (computerSelection === 'rock') ? incrementScore('tie')
+                : (computerSelection === 'paper') ? incrementScore('comp')
+                : incrementScore('person');
     } else if (playerSelection === 'paper'){
-            return (computerSelection === 'paper') ? "Tie! Great minds think alike!" 
-            :   (computerSelection === 'scissors') ? changeScore('l')
-            :   changeScore('w');
+        return (computerSelection === 'paper') ? incrementScore('tie')
+                : (computerSelection === 'scissors') ? incrementScore('comp')
+                : incrementScore('person');
     } else if (playerSelection === 'scissors'){
-            return (computerSelection === 'scissors') ? "We chose ALIKE!" 
-            :   (computerSelection === 'rock') ? changeScore('l')
-            :   changeScore('w');
+        return (computerSelection === 'scissors') ? incrementScore('tie')
+                : (computerSelection === 'rock') ? incrementScore('comp')
+                : incrementScore('person');
     } else if (playerSelection){
             exitStrategy = true;
     } else return "Please enter a valid option";

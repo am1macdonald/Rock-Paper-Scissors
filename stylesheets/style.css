@@ -90,12 +90,16 @@ h6 {
 }
 
 #tie-counter {
+    
 
 }
 
 .score {
+    background-color: brown;
     font-family: 'danger';
+    font-size: 4.0vw;
 }
+
 
 #round-number {
     font-size: 3vw;
