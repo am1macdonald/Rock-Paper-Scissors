@@ -19,7 +19,7 @@ Turns out there's a second part to the project!
 
  - Learning how to design a user interface for a simple game.
  - Learned how to use javaScript to add interactivity to a game.
- - Learned how to modify HTML and CSS using javaScript.
+ - Learned how to manipulate the DOM using javaScript.
 
 
  Thanks for dropping by!
