@@ -18,44 +18,57 @@
     <title>Rock, paper, scissors game</title>
   </head>
   <main>
-    <body id="background-container">
-      <h1 id="game-title">MADD JOHN'S RPS 2021</h1> 
-      <div id="game-panel">
-            <h4 class="panel-text-outline" id="round-number">ROUND: ${round_number}</h2>
-            <div id="score-keeper">
-              <div  class="score-card" id="player-score-card">
-                <div id="player-score">
-                  <h5 class="panel-text-outline">Home</h5>
-                  <div class="score">
-                    <span id="player-score-display">0</span>
-                  </div>
-                  <div class="score-breakdown" id="player-score-breakdown"></div>
-                </div>
-              </div>
-              <div id="tie-counter">
-                <h6>Ties</h6>
-                <div class="score">
-                  <span id="ties-display">0</span>
-                </div>
-              </div>
-              <div class="score-card" id="computer-score-card">
-                <div class="computer-score">
-                  <h5 class="panel-text-outline">Away</h5>
-                  <div class="score">
-                    <span id="computer-score-display">0</span>
-                  </div>
-                  <div class="score-breakdown" id="computer-score-breakdown"></div>
-                </div>
-              </div>
-            </div>
-            <div class="selection_buttons">
-              <button id="rock" name="rock" type="button">ROCK</button>
-              <button id="paper" name="paper" type="button">PAPER</button>
-              <button id="scissors" name="scissors" type="button">SCISSORS</button>
-            </div>
+    <body>
+      <div id="background-container">
+        <div id="results-Modal" class="modal">
+          <div class="modal-content">
+            <span class="close"></span>
+            <p></p>
+            <button name="again" id="again">PLAY AGAIN</button>
+            <button name="quit" id="quit">QUIT</button>
+          </div>
+        </div>
 
-    
+        <h1 id="game-title">MADD JOHN'S RPS 2021</h1> 
+        <div id="game-panel">
+              <h4 class="panel-text-outline" id="round-number">READY?</h2>
+              <div id="score-keeper">
+                <div  class="score-card" id="player-score-card">
+                  <div id="player-score">
+                    <h5 class="panel-text-outline">Home</h5>
+                    <div class="score">
+                      <span id="player-score-display">0</span>
+                    </div>
+                    <div class="score-breakdown" id="player-score-breakdown"></div>
+                  </div>
+                </div>
+                <div id="tie-counter">
+                  <h6 class="panel-text-outline">Ties</h6>
+                  <div class="score">
+                    <span id="ties-display">0</span>
+                  </div>
+                </div>
+                <div class="score-card" id="computer-score-card">
+                  <div class="computer-score">
+                    <h5 class="panel-text-outline">Away</h5>
+                    <div class="score">
+                      <span id="computer-score-display">0</span>
+                    </div>
+                    <div class="score-breakdown" id="computer-score-breakdown"></div>
+                  </div>
+                </div>
+              </div>
+              <div id="button-container">
+                <button class="game-button" id="rock" name="rock" type="button"><img id="rock-icon" src="https://img.icons8.com/ios/100/000000/rock.png"/></button>
+                <button class="game-button" id="paper" name="paper" type="button"><img id="paper-icon" src="https://img.icons8.com/ios/100/000000/paper.png"/></button>
+                <button class="game-button" id="scissors" name="scissors" type="button"><img id="scissors-icon" src="https://img.icons8.com/ios/100/000000/scissors.png"/></button>
+              </div>
+
+      
+        </div>
+
       </div>
+      
     </body>
     <footer id="credits">
       <h5>Credits</h5>

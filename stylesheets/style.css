@@ -15,6 +15,21 @@ body {
     color: white;
     overflow: hidden;
 }
+.modal{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 50vw;
+    min-height: 50vw;
+    border-radius: 8px;
+
+    
+}
 
 h1 {
     font-size: 7.5vw;
@@ -59,6 +74,26 @@ h1 {
     text-align: center;
     z-index: auto;
 }
+#button-container{
+    background-color: red;
+    min-width: 100%;
+    min-height: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+button {
+
+    padding: 5vw;
+
+    font-size: 1vw;
+    font-family: 'Graduate', cursive;
+    font-size: 3vw;
+
+}
+button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
 
 .panel-text-outline{
     -webkit-text-stroke: 0.5px black;
@@ -67,26 +102,35 @@ h1 {
 #score-keeper {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: violet;
 
-    min-height: 200px;
+    margin: 0 5vw;
+    padding: 0 2vw;
+    border-radius: 8px;
+
+    min-height: 22vh;
 }
 
 .score-card {
 
+    text-align: center;
+    display: grid;
+    grid-template-rows: 2fr 5fr;
+    
+
     background-color: blue;
-    width: 35%;
+    width: 30%;
 }
 
 h5 {
 
-    font-size: 2.5vw;
+    font-size: 3.5vw;
 
 }
 
 h6 {
-    font-size: 2.0vw;
+    font-size: 2.5vw;
 }
 
 #tie-counter {
@@ -105,18 +149,10 @@ h6 {
     font-size: 3vw;
 }
 
-button {
-    
-}
-
-#credits {
-
-    
+#credits {    
     position: absolute;
     bottom: 0.15em;
     left: 0.15em;
-
-
 }
 
 .credit {
