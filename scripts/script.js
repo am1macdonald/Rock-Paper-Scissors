@@ -24,22 +24,6 @@ function incrementScore(player) {
     } else tieCount++;
     updateScores();
 };
-
-
-
-
-
-let exitStrategy = false;
-
-function changeScore(winOrLose){
-        if (winOrLose == 'w') {
-            playerScore++
-            return "Win!"
-        } else if (winOrLose == 'l'){
-            computerScore++
-            return "Lose..."
-        }
-};
 function computerPlay() {
     const choices = ['rock', 'paper', 'scissors'];
     return choices[Math.floor(Math.random() * choices.length)];
@@ -56,28 +40,16 @@ function playRound(playerSelection) {
     
 
     if (playerSelection === 'rock') {
-        return (computerSelection === 'rock') ? incrementScore('tie')
-                : (computerSelection === 'paper') ? incrementScore('comp')
-                : incrementScore('person');
+        return (computerSelection === 'rock') ? tieCount++
+                : (computerSelection === 'paper') ? computerScore++
+                : playerScore++;
     } else if (playerSelection === 'paper'){
-        return (computerSelection === 'paper') ? incrementScore('tie')
-                : (computerSelection === 'scissors') ? incrementScore('comp')
-                : incrementScore('person');
+        return (computerSelection === 'paper') ? tieCount++
+                : (computerSelection === 'scissors') ? computerScore++
+                : playerScore++;
     } else if (playerSelection === 'scissors'){
-        return (computerSelection === 'scissors') ? incrementScore('tie')
-                : (computerSelection === 'rock') ? incrementScore('comp')
-                : incrementScore('person');
-    } else if (playerSelection){
-            exitStrategy = true;
-    } else return "Please enter a valid option";
-
-    
+        return (computerSelection === 'scissors') ? tieCount++
+                : (computerSelection === 'rock') ? computerScore++
+                : playerScore++;
+    }  
 };
-    /*
-    while (playerScore < 5 && computerScore < 5 && exitStrategy == false){
-        const playerSelection = prompt("Rock, paper, or scissors? (R, P, S)\n\nType Exit to quit.");
-        const computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection), computerSelection);
-        console.log(playerScore, computerScore);
-    };
-    */
