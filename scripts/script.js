@@ -15,6 +15,9 @@ buttons.forEach((button) => {
 var modal = document.getElementById("results-modal");
 
 function endGame(){
+    buttons.forEach((button)=>{
+        button.disabled = true;
+    })
 
     if (playerScore > computerScore){
         document.getElementById("announcement").innerText = "You Win!";
