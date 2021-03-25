@@ -12,15 +12,16 @@ buttons.forEach((button) => {
     });
 });
 
-var modal = document.getElementById("results-Modal");
+var modal = document.getElementById("results-modal");
 
 function endGame(){
 
     if (playerScore > computerScore){
+        document.getElementById("announcement").innerText = "You Win!";
         
-    } else alert("Loser!");
+    } else document.getElementById("announcement").innerText = "You Lose...";
 
-    modal
+    modal.style.display = "block";
 
 }
 

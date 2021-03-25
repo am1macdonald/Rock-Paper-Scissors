@@ -16,7 +16,7 @@ body {
     overflow: hidden;
 }
 .modal{
-    display: block;
+    display: none;
     position: fixed;
     z-index: 1;
     background-color: black;
