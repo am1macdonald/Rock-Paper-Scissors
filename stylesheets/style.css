@@ -34,6 +34,7 @@ h1 {
     left:50%;
     display: block;
     width: 100%;
+    min-height: 25%;
     
     transform: translateX(-50%);
     font-size: 7vw;
@@ -86,7 +87,7 @@ h1 {
     justify-content: space-around;
 }
 button {
-
+    border-radius: 25px;
     padding: 1vw;
 }
 button:hover{
@@ -94,7 +95,7 @@ button:hover{
 
 }
 .icon{
-    min-width: 4vw;
+    min-width: 3vw;
     height: auto;
 
 }
