@@ -60,6 +60,8 @@ function computerPlay() {
 
 function playRound(playerSelection) {
     const computerSelection = computerPlay();
+    document.getElementById("player-choice").innerText = playerSelection;
+    document.getElementById("computer-choice").innerText = computerSelection;
     if (playerSelection === 'rock') {
         return (computerSelection === 'rock') ? tieCount++
                 : (computerSelection === 'paper') ? computerScore++

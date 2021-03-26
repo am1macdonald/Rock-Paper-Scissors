@@ -13,23 +13,30 @@ body {
     overflow: hidden;
 }
 .modal{
-    display: block;
-    position: absolute;
+    display: none;
+    position: fixed;
     z-index: 1;
     background-color: black;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 
-    width: 50vw;
-    height: 50vw;
+    max-width: 50vw;
+    max-height: 50vw;
     border-radius: 8px;
 
     
 }
 
 h1 {
-    font-size: 7.5vw;
+
+    position: fixed;
+    left:50%;
+    display: block;
+    width: 100%;
+    
+    transform: translateX(-50%);
+    font-size: 7vw;
     text-shadow: 2px 2px 5px grey;
     text-align: center;
     color: white;   
@@ -50,7 +57,7 @@ h1 {
 
 #game-panel {
     
-    background-color: #e8e4e6;
+    background-color: #004643;
     opacity: 0.95;
     color: #f9bc60;
     text-shadow: 1px 1px 3px gray;
@@ -65,8 +72,8 @@ h1 {
     justify-content: space-around;
 
     border-radius: 8px;
-    min-width: 70vw;
-    min-height: 60vh;
+    min-width: 65vw;
+    min-height: 55vh;
 
     text-align: center;
     z-index: auto;
@@ -87,7 +94,7 @@ button:hover{
 
 }
 .icon{
-    width: 5vw;
+    min-width: 4vw;
     height: auto;
 
 }
@@ -106,14 +113,14 @@ button:hover{
     padding: 0 2vw;
     border-radius: 8px;
 
-    min-height: 22vh;
+    max-height: 16vh;
 }
 
 .score-card {
 
     text-align: center;
     display: grid;
-    grid-template-rows: 2fr 5fr;
+    grid-template-rows: 1fr 3fr;
     
 
     background-color: blue;
@@ -145,6 +152,10 @@ h6 {
 #round-number {
     font-size: 3vw;
 }
+#choice-announcement{
+    font-size: 4vh;
+    font-weight: 4vh;
+}
 
 #credits {    
     position: absolute;
@@ -156,4 +167,7 @@ h6 {
     font-size: 1.5vw;
     text-decoration: none;
     color: #f9bc60;
+}
+.credit>a{
+    font-size: 1.6vw;
 }
