@@ -15,12 +15,17 @@ body {
     display: none;
     position: fixed;
     z-index: 1;
-    background-color: black;
+
+    background-color: #faae2b;
+    color: #00473e;
+    font-size: 2rem;
+    font-weight: 0.6rem;
+
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    max-width: 60vh;
-    max-height: 60vh;
+    max-width: 100%;
+    max-height: auto;
     border-radius: 8px;    
 }
 #modal-content{
@@ -89,6 +94,7 @@ h1 {
     display: flex;
     justify-content: space-around;
     margin: 0 2vw;
+    margin-bottom: 2vw;
 }
 .game-button {
     background-color: #fff0d2;
@@ -130,8 +136,7 @@ h5 {
     font-size: 1.5rem;
 }
 h6 {
-    font-size: 1.3rem;
-    
+    font-size: 1.3rem;    
     margin-bottom: .6rem;
 }
 #tie-counter {
@@ -158,12 +163,14 @@ h6 {
 }
 #round-number {
     font-size: 5vh;
+    margin: 2vw
 }
 #choice-announcement{
-    font-size: 1.3rem;
-    font-weight: 4vh;
+    padding: 1vw 0;
+    font-size: 1.41rem;
+    font-weight: 0.3rem;
     display: grid;
-    grid-template-columns: 3fr 1fr 3fr;
+    grid-template-columns: 3fr 0fr 3fr;
 }
 #credits {    
     position: absolute;
