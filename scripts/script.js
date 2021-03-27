@@ -9,7 +9,7 @@ const buttons = document.querySelectorAll('.game-button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         playRound(button.id);
-        updateScores()        
+        updateScores();       
     });
 });
 
