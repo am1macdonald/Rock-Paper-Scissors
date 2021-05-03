@@ -1,5 +1,3 @@
-##WORK IN PROGRESS
-
 Thank you for visiting my Rock, Paper, Scissors App.
 
 This is somthing I have put together for a JavaScript Project for "The Odin Project"
